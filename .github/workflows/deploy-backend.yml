@@ -7,8 +7,8 @@ name: Deploy Backend to Cloud Run
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - 'backend/**'
+    #paths:
+      #- 'backend/**'
 
 jobs:
   deploy:
