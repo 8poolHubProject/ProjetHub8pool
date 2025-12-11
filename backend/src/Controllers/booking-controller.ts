@@ -1,15 +1,15 @@
-// src/routes/booking.controller.ts
+// src/Controllers/booking.controller.ts
 
 import type { Response } from 'express';
-import type { AuthRequest } from '../middleware/auth.middleware.js'; // Importez votre type
-import { firestoreDB } from '../config/firebase-admin.js'; // Importez la BDD admin
+import type { AuthRequest } from '.././Infrastructure/auth.middleware.js'; // Importez votre type
+import { firestoreDB } from '../Infrastructure/config/firebase-admin.js'; // Importez la BDD admin
 
 /**
  * Crée une nouvelle demande de réservation (status: 'pending')
  */
 export const createBooking = async (req: AuthRequest, res: Response) => {
   try {
-    // 1. Récupérer l'ID de l'utilisateur (grâce au middleware) [cite: 51]
+    // 1. Récupérer l'ID de l'utilisateur (grâce au Infrastructure) [cite: 51]
     const userId = req.user?.uid;
     if (!userId) {
       return res.status(401).send('Authentification invalide.');

@@ -1,10 +1,10 @@
 // src/index.ts (ou server.ts)
 import express, { type Response } from 'express';
 import cors from 'cors';
-import { authMiddleware } from './middleware/auth.middleware.js';
-import type { AuthRequest } from './middleware/auth.middleware.js';
+import { authMiddleware } from '././Infrastructure/auth.middleware.js';
+import type { AuthRequest } from '././Infrastructure/auth.middleware.js';
 import { auth } from 'firebase-admin';
-import { createBooking } from './routes/booking-controller.js';
+import { createBooking } from './Controllers/booking-controller.js';
 
 const app = express();
 app.use(cors());

@@ -13,5 +13,6 @@ const app = initializeApp({
   credential: applicationDefault(),
 });
 
+export const db: Firestore = getFirestore(app);
 export const firebaseAuth: Auth = getAuth(app);
 export const firestoreDB: Firestore = getFirestore(app);

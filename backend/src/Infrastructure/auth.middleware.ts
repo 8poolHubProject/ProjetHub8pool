@@ -1,8 +1,8 @@
-// src/middleware/auth.middleware.ts
+// src/Infrastructure/auth.Infrastructure.ts
 
 import type { Request, Response, NextFunction } from 'express';
 import type { DecodedIdToken } from 'firebase-admin/auth';
-import { firebaseAuth } from '../config/firebase-admin.js';
+import { firebaseAuth } from './config/firebase-admin.js';
 
 export interface AuthRequest extends Request {
   user?: DecodedIdToken;
